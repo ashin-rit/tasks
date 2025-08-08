@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form</title>
+</head>
+<body>
+    <h1>Event Registration</h1>
+    <form action="submit.php">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br><br>
+
+        <label for="attendees">Number of Attendees:</label>
+        <input type="number" id="attendees" min="1" max="10"><br><br>
+
+        <label for="eventdate">Event Date:</label>
+        <input type="date" id="eventdate" min="2024-07-01"><br><br>
+
+        <label for="eventtime">Event Time:</label>
+        <input type="time" id="eventtime"><br><br>
+
+        <label for="eventtype">Event Type:</label>
+        <select id="eventtype" required>
+            <option value="">Select an event type</option>
+            <option value="conference">Conference</option>
+            <option value="workshop">Workshop</option>
+            <option value="webinar">Webinar</option>
+        </select><br><br>
+
+        <label>Dietary Restrictions:</label>
+        <input type="checkbox" id="vegetarian" value="Vegetarian">
+        <label for="vegetarian">Vegetarian</label>
+        <input type="checkbox" id="glutenfree" value="Gluten-Free">
+        <label for="glutenfree">Gluten-Free</label><br><br>
+
+        <label>T-shirt Size:</label>
+        <input type="radio" id="size-s" value="S">
+        <label for="size-s">S</label>
+        <input type="radio" id="size-m" value="M">
+        <label for="size-m">M</label>
+        <input type="radio" id="size-l" value="L">
+        <label for="size-l">L</label>
+        <input type="radio" id="size-xl" value="XL">
+        <label for="size-xl">XL</label><br><br>
+
+        <label for="comments">Comments/Questions:</label><br>
+        <textarea id="comments" maxlength="250" rows="4" cols="40"></textarea><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
